@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:ngdemo1/pages/details_page.dart';
 import 'package:ngdemo1/pages/home_page.dart';
+import 'package:ngdemo1/pages/settings_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +20,11 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: HomePage(),
+      routes: {
+        HomePage.id: (context) => HomePage(),
+        DetailsPage.id:(context) => DetailsPage(),
+        SettingsPage.id:(context) => SettingsPage(),
+      },
     );
   }
 }
